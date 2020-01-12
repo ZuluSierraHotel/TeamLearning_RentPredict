@@ -52,8 +52,8 @@ def preprocessingData(data):
     return data
 
 
-# data_train = preprocessingData(data_train)
-# print(data_train.info())
+data_train = preprocessingData(data_train)
+print(data_train.info())
 
 # buildYearmean = pd.DataFrame(data[data['buildYear'] != '暂无信息']['buildYear'].mode())
 # print(buildYearmean)
