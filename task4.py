@@ -1,11 +1,14 @@
 from __future__ import print_function
-import lightgbm as lgb
-import sklearn
-import numpy
-import hyperopt
-from hyperopt import hp, fmin, tpe, STATUS_OK, Trials
 import colorama
 import numpy as np
+import pandas as pd
+import lightgbm as lgb
+import sklearn
+import hyperopt
+from hyperopt import hp, fmin, tpe, STATUS_OK, Trials
+from sklearn.model_selection import KFold
+from sklearn.metrics import r2_score
+
 
 N_HYPEROPT_PROBES = 500
 HYPEROPT_ALGO = tpe.suggest  #  tpe.suggest OR hyperopt.rand.suggest
@@ -38,7 +41,7 @@ cur_best_score = 0 # 0 or np.inf
 log_path = 'lgb-hyperopt-log.txt'
 log_writer = open(log_path, 'w' )
 
-data_train = pd.read_csv('数据集/ProccessedData.csv')
+data_train = pd.read_csv('数据集/ProccessedData.csv', index_col=0)
 Y_train = data_train.pop('tradeMoney')
 X_train = data_train
 X_train.pop('Type')
@@ -46,8 +49,7 @@ X_train.pop('Type')
 
 def objective(space):
     global obj_call_count, cur_best_score
-    golbal
-    X_train, Y_train
+    # golbal X_train, Y_train
 
     obj_call_count += 1
 

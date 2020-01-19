@@ -33,8 +33,10 @@ from sklearn.ensemble import IsolationForest
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
 
-train_path = '/Users/gongbin/Documents/数据竞赛/Datawhale/team-learning/数据竞赛（房租预测）/Data/train_data.csv'
-test_path = '/Users/gongbin/Documents/数据竞赛/Datawhale/team-learning/数据竞赛（房租预测）/Data/test_a.csv'
+# train_path = '/Users/gongbin/Documents/数据竞赛/Datawhale/team-learning/数据竞赛（房租预测）/Data/train_data.csv'
+# test_path = '/Users/gongbin/Documents/数据竞赛/Datawhale/team-learning/数据竞赛（房租预测）/Data/test_a.csv'
+train_path = '数据集/train_data.csv'
+test_path = '数据集/test_a.csv'
 data_train_origin = pd.read_csv(train_path)
 data_train = data_train_origin.copy()
 data_train['Type'] = 'Train'
